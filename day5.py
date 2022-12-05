@@ -10,7 +10,7 @@ ins = [[int(d) for d in re.findall("\d+", line)] for line in ins.strip().split("
 def parse(crates):
     stacks = []
     for i in range(1, 35, 4):
-        stack = [c[i] for c in crates[:-1] if c[i] != " "]
+        stack = [c[i] for c in crates if c[i] != " "]
         stacks.append(stack[::-1])
     return stacks
 
